@@ -199,7 +199,7 @@ Addictive = Redis:sismember(Thesource_Spanish.."source_Spanish:Addictive:Group".
 Distinguished = Redis:sismember(Thesource_Spanish.."source_Spanish:Distinguished:Group"..ChatId,UserId)
 StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
 if UserId == 1703279017 then
-Status = '(المبرمج اسرائيل)'
+Status = '(المبرمج نيكولاس)'
 elseif UserId == 5108150259 then
 Status = '#فـودیـگـا یـحـتـه'
 elseif UserId == 773 then
@@ -946,7 +946,7 @@ elseif Statusrestricted(msg.chat_id,msg.sender.user_id).SilentGroup == true then
 return LuaTele.deleteMessages(msg.chat_id,{[1]= msg.id})
 end
 if tonumber(msg.sender.user_id) == 1703279017 then
-msg.Name_Controller = '(المبرمج اسرائيل)'
+msg.Name_Controller = '(المبرمج نيكولاس)'
 msg.The_Controller = 1
 elseif tonumber(msg.sender.user_id) == 5108150259 then
 msg.Name_Controller = '#فـودیـگـا_یـحـتـه'
@@ -2336,57 +2336,6 @@ return LuaTele.sendText(msg_chat_id,msg_id,"\n⧾ الاشتراك الاجبا�
 else
 return LuaTele.sendText(msg_chat_id,msg_id,"\n⧾ لا توجد قناة في الاشتراك ارسل تغيير الاشتراك الاجباري","md",true)  
 end
-end
-
-if text == 'تحديث السورس' or text == 'تحديث السورس ⧾' then
-if not msg.ControllerBot then 
-return LuaTele.sendText(msg_chat_id,msg_id,'\n*⧾ هاذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
-end
---os.execute('rm -rf source_Spanish.lua')
---download('https://raw.githubusercontent.com/gackmm/shyco/master/source_Spanish.lua','source_Spanish.lua')
-return LuaTele.sendText(msg_chat_id,msg_id,'\n*⧾ تم تحديث السورس * ',"md",true)  
-end
-
-if text == 'تغير المطور الاساسي' or text == 'تغير المطور الاساسي ⧾' then
-if not msg.ControllerBot then 
-return LuaTele.sendText(msg_chat_id,msg_id,'\n*⧾ هاذا الامر يخص⦘'..Controller_Num(1)..' ⦘* ',"md",true)  
-end
-local reply_markup = LuaTele.replyMarkup{
-type = 'inline',
-data = {
-{
-{text = 'نعم', data = msg.sender.user_id..'/yaaaaa'}, {text = 'لا', data = msg.sender.user_id..'/Noooo'}, 
-},
-}
-}
-return LuaTele.sendText(msg_chat_id,msg_id,'*\n⧾سوف يتم تغير المطور الاساسي\nهل  انت  متأكد من هذا التغير ؟*',"md",false, false, false, false, reply_markup)
-end
-
-if text == "الغاء" or text == 'الغاء الامر' then   
-Redis:del(Thesource_Spanish.."source_Spanish:AddSudosNew"..msg_chat_id)
-return LuaTele.sendText(msg_chat_id,msg_id, "\n⧾ تم الغاء امر تغيير المطور الاساسي","md",true)    
-end 
-Redis:del(Thesource_Spanish.."source_Spanish:AddSudosNew"..msg_chat_id)
-if text and text:match("^@[%a%d_]+$") then
-local UserId_Info = LuaTele.searchPublicChat(text)
-if not UserId_Info.id then
-return LuaTele.sendText(msg_chat_id,msg_id,"\n⧾ عذرآ لا يوجد حساب بهاذا المعرف ","md",true)  
-end
-if UserId_Info.type.is_channel == true then
-return LuaTele.sendText(msg_chat_id,msg_id,"\n⧾ عذرآ لا تستطيع استخدام معرف قناة او جروب ","md",true)  
-end
-local Informationlua = io.open("Information.lua", 'w')
-Informationlua:write([[
-return {
-Token = "]]..Token..[[",
-UserBot = "]]..UserBot..[[",
-UserSudo = "]]..text:gsub('@','')..[[",
-SudoId = ]]..UserId_Info.id..[[
-}
-]])
-Informationlua:close()
-LuaTele.sendText(msg_chat_id,msg_id,"\n⧾ تم تغيير المطور الاساسي اصبح على : [@"..text:gsub('@','').."]","md",true)  
-dofile('source_Spanish.lua')  
 end
 
 if text == 'جلب النسخه الاحتياطيه ⧾' or text == 'جلب نسخه احتياطيه' then
@@ -10112,7 +10061,7 @@ end
 end
 
 if text == 'محمد' or text == 'نيكولاس' or text == 'مبرمج السورس' or text == 'المبرمج نيكولاس' then  
-local UserId_Info = LuaTele.searchPublicChat("K_I_U1")
+local UserId_Info = LuaTele.searchPublicChat("J_O_K_E_R1_2")
 if UserId_Info.id then
 local UserInfo = LuaTele.getUser(UserId_Info.id)
 local InfoUser = LuaTele.getUserFullInfo(UserId_Info.id)
@@ -10123,7 +10072,7 @@ Bio = ''
 end
 local photo = LuaTele.getUserProfilePhotos(UserId_Info.id)
 if photo.total_count > 0 then
-local TestText = "‹ معلومات المبرمج نيكولاس ›\n\n‹*الاسم* :› ["..UserInfo.first_name.."](tg://user?id="..UserId_Info.id..")\n\n‹ بار اسرائيل › @B_A_2_X\n\n‹*البايو* :› ["..Bio.."]"
+local TestText = "‹ معلومات المبرمج نيكولاس ›\n\n‹*الاسم* :› ["..UserInfo.first_name.."](tg://user?id="..UserId_Info.id..")\n\n‹ بار نيكولاس › @B_A_2_X\n\n‹*البايو* :› ["..Bio.."]"
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
@@ -10150,7 +10099,7 @@ end
 end
 
 if text == 'فوديكا' or text == 'ميشو' or text == 'مطور السورس' then  
-local UserId_Info = LuaTele.searchPublicChat("vod_ik_ax")
+local UserId_Info = LuaTele.searchPublicChat("U_Androld")
 if UserId_Info.id then
 local UserInfo = LuaTele.getUser(UserId_Info.id)
 local InfoUser = LuaTele.getUserFullInfo(UserId_Info.id)
