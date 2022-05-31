@@ -2270,7 +2270,7 @@ for k,idASAS in pairs(v.ASAS) do
 Redis:sadd(Thesource_Spanish.."source_Spanish:TheBasics:Group"..idg,idASAS)
 end;end
 end
-return LuaTele.sendText(msg_chat_id,msg_id,'⧾ تم استرجاع المجموعات من نسخه جانكيز')
+return LuaTele.sendText(msg_chat_id,msg_id,'⧾ تم استرجاع المجموعات من نسخه نيكولاس')
 else
 return LuaTele.sendText(msg_chat_id,msg_id,'⧾ الملف لا يدعم هاذا البوت')
 end
@@ -10333,7 +10333,7 @@ local T =[[
 
 ⧾ TwisL : [‹ Dev Niccholas ›](t.me/CH_SP_Q)
 
-⧾ Channel : [‹ Team Niccholas ›](t.me/B_A_2_X)
+⧾ Channel : [‹ Source Niccholas ›](t.me/B_A_2_X)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10507,7 +10507,7 @@ end
 if text == "بوت" or text == "البوت" or text == "bot" or text == "Bot" then
 local photo = LuaTele.getUserProfilePhotos(Thesource_Spanish)
 local mrt = LuaTele.getUser(Sudo_Id)
-local NamesBot = (Redis:get(Thesource_Spanish.."source_Spanish:Name:Bot") or "جانكيز")
+local NamesBot = (Redis:get(Thesource_Spanish.."source_Spanish:Name:Bot") or "نيكولاس")
 local BotName = {
 'اسمي '..NamesBot..' يا قلبي 😍❤️',
 'اسمي '..NamesBot..' يا روحي 🙈❤️',
@@ -10537,14 +10537,14 @@ msgg = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg_chat_id .. "&photo="..photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id.."&caption=".. URL.escape(NamesBots).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 end
-if text == (Redis:get(Thesource_Spanish.."source_Spanish:Name:Bot") or "جانكيز") then
+if text == (Redis:get(Thesource_Spanish.."source_Spanish:Name:Bot") or "نيكولاس") then
 local photo = LuaTele.getUserProfilePhotos(Thesource_Spanish)
 local mrt = LuaTele.getUser(Sudo_Id)
 for Name_User in string.gmatch(mrt.first_name, "[^%s]+" ) do
 mrt.first_name = Name_User
 break
 end 
-local NamesBot = (Redis:get(Thesource_Spanish.."source_Spanish:Name:Bot") or "جانكيز")
+local NamesBot = (Redis:get(Thesource_Spanish.."source_Spanish:Name:Bot") or "نيكولاس")
 local BotName = {
 'نعم يروحي 🌝❤️',
 'نعم يا قلب 🙈❤️ '..NamesBot..'',
@@ -13308,7 +13308,7 @@ baniusername = '*['..bain.first_name..'](tg://user?id='..bain.id..')*'
 else
 baniusername = 'لا يوجد'
 end
-local CmdStart = '*\n⧾ أهلآ بك في بوت '..(Redis:get(Thesource_Spanish.."source_Spanish:Name:Bot") or "جانكيز")..
+local CmdStart = '*\n⧾ أهلآ بك في بوت '..(Redis:get(Thesource_Spanish.."source_Spanish:Name:Bot") or "نيكولاس")..
 '\n⧾ اختصاص البوت حماية المجموعات'..
 '\n⧾ لتفعيل البوت عليك اتباع مايلي ...'..
 '\n⧾ اضف البوت الى مجموعتك'..
@@ -13350,10 +13350,10 @@ data = {
 {text = 'الاحصائيات ⧾',type = 'text'}, 
 },
 {
-{text = '☽ اوامر اضف ☾',type = 'text'},{text = '☽ اوامر التفعيل ☾', type = 'text'},
+{text = 'اوامر اضف ',type = 'text'},{text = ' اوامر التفعيل ', type = 'text'},
 },
 {
-{text = '☽ اوامر الاذاعه ☾',type = 'text'},{text = '☽ الاوامر ☾', type = 'text'},
+{text = 'اوامر الاذاعه ',type = 'text'},{text = ' الاوامر ', type = 'text'},
 },
 {
 {text = '┄─━━ Source Niccholas ━━─┄',type = 'text'},
@@ -13372,44 +13372,44 @@ data = {
 return LuaTele.sendText(msg_chat_id,msg_id,'⧾  اهلا بك عزيزي المطور ', 'md', false, false, false, false, reply_markup)
 end
 end
-if text == '☽ اوامر التفعيل ☾' then
+if text == 'اوامر التفعيل ' then
 if not msg.ControllerBot then 
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⧾هاذا الامر يخص⦗ '..Controller_Num(1)..' ⦘* ',"md",true)  
 end
 local reply_markup = LuaTele.replyMarkup{type = 'keyboard',resize = true,is_personal = true,
 data = {
 {
-{text = 'تفعيل التواصل ⧾',type = 'text'},{text = 'تعطيل التواصل ⧾', type = 'text'},
+{text = 'تفعيل التواصل ',type = 'text'},{text = 'تعطيل التواصل ', type = 'text'},
 },
 {
-{text = 'تفعيل البوت الخدمي ⧾',type = 'text'},{text = 'تعطيل البوت الخدمي ⧾', type = 'text'},
+{text = 'تفعيل البوت الخدمي ',type = 'text'},{text = 'تعطيل البوت الخدمي ', type = 'text'},
 },
 {
 {text = '┄─━━ Source Niccholas ━━─┄',type = 'text'},
 },
 {
-{text = 'تفعيل الاشتراك الاجباري ⧾',type = 'text'},{text = 'تعطيل الاشتراك الاجباري ⧾',type = 'text'},
+{text = 'تفعيل الاشتراك الاجباري ',type = 'text'},{text = 'تعطيل الاشتراك الاجباري ',type = 'text'},
 },
 {
-{text = 'الغاء الامر ⧾',type = 'text'},
+{text = 'الغاء الامر ',type = 'text'},
 },
 {
-{text = '☽  القائمه الرئيسيه ☾',type = 'text'},
+{text = ' القائمه الرئيسيه ',type = 'text'},
 },
 }
 }
 return LuaTele.sendText(msg_chat_id,msg_id,'⧾ اهلا بك عزيزي المطور اوامر التفعيل', 'md', false, false, false, false, reply_markup)
-elseif text == '☽ اوامر الاذاعه ☾' then
+elseif text == 'اوامر الاذاعه ' then
 if not msg.ControllerBot then 
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⧾هاذا الامر يخص⦗ '..Controller_Num(1)..' ⦘* ',"md",true)  
 end
 local reply_markup = LuaTele.replyMarkup{type = 'keyboard',resize = true,is_personal = true,
 data = {
 {
-{text = 'اذاعه للمجموعات ⧾',type = 'text'},{text = 'اذاعه خاص ⧾', type = 'text'},
+{text = 'اذاعه للمجموعات ',type = 'text'},{text = 'اذاعه خاص ', type = 'text'},
 },
 {
-{text = 'اذاعه بالتوجيه ⧾',type = 'text'},{text = 'اذاعه بالتوجيه خاص ⧾', type = 'text'},
+{text = 'اذاعه بالتوجيه ',type = 'text'},{text = 'اذاعه بالتوجيه خاص ', type = 'text'},
 },
 {
 {text = '┄─━━ Source Niccholas ━━─┄',type = 'text'},
@@ -13421,42 +13421,42 @@ data = {
 {text = 'الغاء الامر ⧾',type = 'text'},
 },
 {
-{text = '☽  القائمه الرئيسيه ☾',type = 'text'},
+{text = '  القائمه الرئيسيه ',type = 'text'},
 },
 }
 }
 return LuaTele.sendText(msg_chat_id,msg_id,'⧾ اهلا بك عزيزي المطور اوامر الاذاعه', 'md', false, false, false, false, reply_markup)
-elseif text == '☽  القائمه الرئيسيه ☾' then
+elseif text == '  القائمه الرئيسيه ' then
 if not msg.ControllerBot then 
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⧾هاذا الامر يخص⦗ '..Controller_Num(1)..' ⦘* ',"md",true)  
 end
 local reply_markup = LuaTele.replyMarkup{type = 'keyboard',resize = true,is_personal = true,
 data = {
 {
-{text = 'الاحصائيات ⧾',type = 'text'}, 
+{text = 'الاحصائيات ',type = 'text'}, 
 },
 {
-{text = '☽ اوامر اضف ☾',type = 'text'},{text = '☽ اوامر التفعيل ☾', type = 'text'},
+{text = ' اوامر اضف ',type = 'text'},{text = ' اوامر التفعيل ', type = 'text'},
 },
 {
-{text = '☽ اوامر الاذاعه ☾',type = 'text'},{text = '☽ الاوامر ☾', type = 'text'},
+{text = ' اوامر الاذاعه ',type = 'text'},{text = ' الاوامر ', type = 'text'},
 },
 {
 {text = '┄─━━ Source Niccholas ━━─┄',type = 'text'},
 },
 {
-{text = 'جلب النسخه الاحتياطيه ⧾',type = 'text'},{text = 'تحديث السورس ⧾',type = 'text'},
+{text = 'جلب النسخه الاحتياطيه ',type = 'text'},{text = 'تحديث السورس ',type = 'text'},
 },
 {
-{text = 'السيرفر ⧾',type = 'text'},{text = 'تغير المطور الاساسي ⧾',type = 'text'},
+{text = 'السيرفر ',type = 'text'},{text = 'تغير المطور الاساسي ',type = 'text'},
 },
 {
-{text = 'الغاء الامر ⧾',type = 'text'},
+{text = 'الغاء الامر ',type = 'text'},
 },
 }
 }
 return LuaTele.sendText(msg_chat_id,msg_id,'⧾ اهلا بك عزيزي المطور ', 'md', false, false, false, false, reply_markup)
-elseif text == '☽ الاوامر ☾' then
+elseif text == ' الاوامر ' then
 if not msg.ControllerBot then 
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⧾هاذا الامر يخص⦗ '..Controller_Num(1)..' ⦘* ',"md",true)  
 end
@@ -13475,34 +13475,34 @@ data = {
 {text = 'تنظيف المجموعات ⧾',type = 'text'},{text = 'تنظيف المشتركين ⧾', type = 'text'},
 },
 {
-{text = 'الغاء الامر ⧾',type = 'text'},
+{text = 'الغاء الامر ',type = 'text'},
 },
 {
-{text = '☽  القائمه الرئيسيه ☾',type = 'text'},
+{text = '  القائمه الرئيسيه ',type = 'text'},
 },
 }
 }
 return LuaTele.sendText(msg_chat_id,msg_id,'⧾ اهلا بك عزيزي المطور في الأوامر', 'md', false, false, false, false, reply_markup)
-elseif text == '☽ اوامر اضف ☾' then
+elseif text == ' اوامر اضف ' then
 if not msg.ControllerBot then 
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⧾هاذا الامر يخص⦗ '..Controller_Num(1)..' ⦘* ',"md",true)  
 end
 local reply_markup = LuaTele.replyMarkup{type = 'keyboard',resize = true,is_personal = true,
 data = {
 {
-{text = 'اضف رد عام ⧾',type = 'text'},{text = 'حذف رد عام ⧾', type = 'text'},
+{text = 'اضف رد عام ',type = 'text'},{text = 'حذف رد عام ', type = 'text'},
 },
 {
-{text = 'تغيير اسم البوت ⧾',type = 'text'},{text = 'حذف اسم البوت ⧾', type = 'text'},
+{text = 'تغيير اسم البوت ',type = 'text'},{text = 'حذف اسم البوت ', type = 'text'},
 },
 {
 {text = '┄─━━ Source Niccholas ━━─┄',type = 'text'},
 },
 {
-{text = 'الاشتراك الاجباري ⧾',type = 'text'},{text = 'تغيير الاشتراك الاجباري ⧾',type = 'text'},
+{text = 'الاشتراك الاجباري ',type = 'text'},{text = 'تغيير الاشتراك الاجباري ',type = 'text'},
 },
 {
-{text = 'تغير كليشه المطور ⧾',type = 'text'},{text = 'حذف كليشه المطور ⧾', type = 'text'},
+{text = 'تغير كليشه المطور ',type = 'text'},{text = 'حذف كليشه المطور ', type = 'text'},
 },
 {
 {text = '┄─━━ Source Niccholas ━━─┄',type = 'text'},
@@ -13514,14 +13514,14 @@ data = {
 {text = 'الغاء الامر ⧾',type = 'text'},
 },
 {
-{text = '☽  القائمه الرئيسيه ☾',type = 'text'},
+{text = '  القائمه الرئيسيه ',type = 'text'},
 },
 }
 }
 return LuaTele.sendText(msg_chat_id,msg_id,'⧾ اهلا بك عزيزي المطور اوامر اضف', 'md', false, false, false, false, reply_markup)
 end
 
-if text == 'السيرفر ⧾' then
+if text == 'السيرفر ' then
 if not msg.ControllerBot then 
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⧾ هاذا الامر يخص⦗ '..Controller_Num(1)..' ⦘* ',"md",true)  
 end
@@ -13546,7 +13546,7 @@ end
 LuaTele.sendText(msg_chat_id,msg_id,ioserver,"md",true)
 end
 
-if text == 'تنظيف المشتركين ⧾' then
+if text == 'تنظيف المشتركين ' then
 if not msg.ControllerBot then 
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⧾ هاذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
@@ -13565,9 +13565,9 @@ Redis:srem(Thesource_Spanish..'source_Spanish:Num:User:Pv',v)
 end
 end
 if x ~= 0 then
-return LuaTele.sendText(msg_chat_id,msg_id,'*⧾ العدد الكلي { '..#list..' }\n⧾ تم العثور على { '..x..' } من المشتركين حاظرين البوت*',"md")
+return LuaTele.sendText(msg_chat_id,msg_id,'*العدد الكلي { '..#list..' }\n⧾ تم العثور على { '..x..' } من المشتركين حاظرين البوت*',"md")
 else
-return LuaTele.sendText(msg_chat_id,msg_id,'*⧾ العدد الكلي { '..#list..' }\n⧾ لم يتم العثور على وهميين*',"md")
+return LuaTele.sendText(msg_chat_id,msg_id,'*العدد الكلي { '..#list..' }\n⧾ لم يتم العثور على وهميين*',"md")
 end
 end
 
@@ -13606,13 +13606,13 @@ LuaTele.leaveChat(v)
 end
 end
 if x ~= 0 then
-return LuaTele.sendText(msg_chat_id,msg_id,'*⧾ العدد الكلي { '..#list..' } للمجموعات \n⧾ تم العثور على { '..x..' } مجموعات البوت ليس ادمن \n⧾ تم تعطيل المجموعه ومغادره البوت من الوهمي *',"md")
+return LuaTele.sendText(msg_chat_id,msg_id,'* العدد الكلي { '..#list..' } للمجموعات \n⧾ تم العثور على { '..x..' } مجموعات البوت ليس ادمن \n⧾ تم تعطيل المجموعه ومغادره البوت من الوهمي *',"md")
 else
-return LuaTele.sendText(msg_chat_id,msg_id,'*⧾ العدد الكلي { '..#list..' } للمجموعات \n⧾ لا توجد مجموعات وهميه*',"md")
+return LuaTele.sendText(msg_chat_id,msg_id,'* العدد الكلي { '..#list..' } للمجموعات \n⧾ لا توجد مجموعات وهميه*',"md")
 end
 end
 
-if text == 'تغير كليشه ستارت ⧾' then 
+if text == 'تغير كليشه ستارت ' then 
 if not msg.ControllerBot then 
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⧾ هاذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
@@ -13624,7 +13624,7 @@ Redis:setex(Thesource_Spanish.."source_Spanish:Change:Start:Bot"..msg.sender.use
 return LuaTele.sendText(msg_chat_id,msg_id,"⧾  ارسل لي كليشه Start الان ","md",true)  
 end
 
-if text == 'حذف كليشه ستارت ⧾' then 
+if text == 'حذف كليشه ستارت ' then 
 if not msg.ControllerBot then 
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⧾ هاذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
@@ -13636,7 +13636,7 @@ Redis:del(Thesource_Spanish.."source_Spanish:Start:Bot")
 return LuaTele.sendText(msg_chat_id,msg_id,"⧾ تم حذف كليشه Start ","md",true)   
 end
 
-if text == 'تغيير اسم البوت ⧾' then 
+if text == 'تغيير اسم البوت ' then 
 if not msg.ControllerBot then 
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⧾ هاذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
@@ -13648,7 +13648,7 @@ Redis:setex(Thesource_Spanish.."source_Spanish:Change:Name:Bot"..msg.sender.user
 return LuaTele.sendText(msg_chat_id,msg_id,"⧾  ارسل لي الاسم الان ","md",true)  
 end
 
-if text == 'حذف اسم البوت ⧾' then 
+if text == 'حذف اسم البوت ' then 
 if not msg.ControllerBot then 
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⧾ هاذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
@@ -13672,7 +13672,7 @@ Redis:set(Thesource_Spanish..'source_Spanish:Num:Add:Bot',text:match("تعين �
 LuaTele.sendText(msg_chat_id,msg_id,'*⧾  تم تعيين عدد اعضاء تفعيل البوت اكثر من : '..text:match("تعين عدد الاعضاء (%d+)$")..' عضو *',"md",true)  
 end
 
-if text == 'تغير كليشه المطور ⧾' then
+if text == 'تغير كليشه المطور ' then
 if not msg.ControllerBot then 
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⧾ هاذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
@@ -13684,7 +13684,7 @@ Redis:set(Thesource_Spanish..'source_Spanish:GetTexting:DevThesource_Spanish'..m
 return LuaTele.sendText(msg_chat_id,msg_id,'⧾  ارسل لي الكليشه الان')
 end
 
-if text == 'حذف كليشه المطور ⧾' then
+if text == 'حذف كليشه المطور ' then
 if not msg.ControllerBot then 
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⧾ هاذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
@@ -13696,7 +13696,7 @@ Redis:del(Thesource_Spanish..'source_Spanish:Texting:DevThesource_Spanish')
 return LuaTele.sendText(msg_chat_id,msg_id,'⧾  تم حذف كليشه المطور')
 end
 
-if text == 'اضف رد عام ⧾' then 
+if text == 'اضف رد عام ' then 
 if not msg.ControllerBot then 
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⧾ هاذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
@@ -13708,7 +13708,7 @@ Redis:set(Thesource_Spanish.."source_Spanish:Set:Rd"..msg.sender.user_id..":"..m
 return LuaTele.sendText(msg_chat_id,msg_id,"⧾ ارسل الان الكلمه لاضافتها في ردود المطور ","md",true)  
 end
 
-if text == 'حذف رد عام ⧾' then 
+if text == 'حذف رد عام ' then 
 if not msg.ControllerBot then 
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⧾ هاذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
@@ -13720,7 +13720,7 @@ Redis:set(Thesource_Spanish.."source_Spanish:Set:On"..msg.sender.user_id..":"..m
 return LuaTele.sendText(msg_chat_id,msg_id,"⧾ ارسل الان الكلمه لحذفها من ردود المطور","md",true)  
 end
 
-if text=='اذاعه خاص ⧾' then 
+if text=='اذاعه خاص ' then 
 if not msg.ControllerBot then 
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*⧾ هاذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
