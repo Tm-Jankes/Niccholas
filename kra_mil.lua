@@ -5979,7 +5979,7 @@ data = {
 LuaTele.sendText(UserInfo.id,0,'*\n⧾ مرحباً عزيزي المنشئ \n\n⧾ شخص ما يحتاج الي مساعده\n\n┄─━━ Source Roma ━━─┄\n\n⧾ اسمه :- '..klajq..' \n\n⧾ ايديه :-  : '..msg.sender.user_id..'\n\n⧾ - معرفة '..basgk..' \n*',"md",false, false, false, false, reply_markup)
 end
 
-if text == 'كراميلا' or text == 'روما' or text == 'مطور السورس' or text == 'وما' then  
+if text == 'كراميلا' or text == 'روما' or text == 'مبرمج السورس' or text == 'وما' then  
 local Get_Chat = LuaTele.getChat(msg_chat_id)
 local Info_Chats = LuaTele.getSupergroupFullInfo(msg_chat_id)
 local bains = LuaTele.getUser(msg.sender.user_id)
@@ -10060,7 +10060,7 @@ return https.request("https://api.telegram.org/bot"..Token..'/sendMessage?chat_i
 end
 end
 
-if text == 'روما' or text == 'روما' or text == 'مطور السورس' or text == 'المبرمج روما' then  
+if text == 'روما' or text == 'روما' or text == 'مبرمج السورس' or text == 'المبرمج روما' then  
 local UserId_Info = LuaTele.searchPublicChat("R_O_O_M_A_A")
 if UserId_Info.id then
 local UserInfo = LuaTele.getUser(UserId_Info.id)
