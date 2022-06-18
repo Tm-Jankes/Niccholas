@@ -2658,17 +2658,17 @@ if ChannelJoin(msg) == false then
 local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/'..Redis:get(itsLotus..'Lotus:Channel:Join')}, },}}
 return LuaTele.sendText(msg.chat_id,msg.id,'*\n◍ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
 end
-Redis:set(Lotus.. Num:Add:Bot ,text:match("تعين عدد الاعضاء (%d+)$") ) 
-send(msg_chat_id,msg_id, *◍ تم تعيين عدد اعضاء تفعيل البوت اكثر من :  ..text:match("تعين عدد الاعضاء (%d+)$")..  عضو * ,"md",true)  
-elseif text == الاحصائيات  then 
+Redis:set(itsJanKees ..'JanKees :Num:Add:Bot',text:match("تعين عدد الاعضاء (%d+)$") ) 
+LuaTele.sendText(msg_chat_id,msg_id,'*◍ تم تعيين عدد اعضاء تفعيل البوت اكثر من : '..text:match("تعين عدد الاعضاء (%d+)$")..' عضو *',"md",true)  
+elseif text =='الاحصائيات' then 
 if not msg.ControllerBot then 
-return send(msg_chat_id,msg_id, \n*◍ هذا الامر يخص   ..Controller_Num(1)..  *  ,"md",true)  
+return LuaTele.sendText(msg_chat_id,msg_id,'\n*◍ هاذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/'..Redis:get(itsLotus..'Lotus:Channel:Join')}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/'..Redis:get(itsJanKees ..'JanKees :Channel:Join')}, },}}
 return LuaTele.sendText(msg.chat_id,msg.id,'*\n◍ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
 end
-LuaTele.sendText(msg_chat_id,msg_id,'*◍ عدد احصائيات البوت الكامله\n◍ عدد المجموعات : '..(Redis:scard(itsLotus..'Lotus:ChekBotAdd') or 0)..'\n◍ عدد المشتركين : '..(Redis:scard(itsLotus..'Lotus:Num:User:Pv') or 0)..'*',"md",true)
+LuaTele.sendText(msg_chat_id,msg_id,'*◍ عدد احصائيات البوت الكامله\n\n◍ عدد المجموعات : '..(Redis:scard(itsJanKees ..'JanKees :ChekBotAdd') or 0)..'\n\n◍ عدد المشتركين : '..(Redis:scard(itsJanKees ..'JanKees :Num:User:Pv') or 0)..'*',"md",true)  
 end
 if text == 'جلب التوكن' then 
 if not msg.ControllerBot then 
